@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.container {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 1px solid #c39f76;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: white;
+}
+.container::after {
+  content: "Hello World! Hello World! Hello World! Hello World! Hello World";
+  white-space: nowrap;
+  animation: mymove 3s linear infinite;
+}
+
+@keyframes mymove {
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(20%);
+  }
+}
