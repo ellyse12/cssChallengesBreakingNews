@@ -8,8 +8,8 @@ body {
   background-color: black;
 }
 .container {
-  width: 280px;
-  height: 280px;
+  width: 800px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,18 +18,35 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
-  gap: 10px;
+
+  .adjcontainer {
+    animation: mymove 2.3s linear infinite;
+    white-space: nowrap;
+  }
+  .adjcontainerback {
+    animation: mymoveback 2.3s linear infinite;
+    color: black;
+    white-space: nowrap;
+  }
 }
+
 span {
-  animation: mymove 2.6s linear infinite;
-  white-space: nowrap;
+  margin: 10px;
 }
 
 @keyframes mymove {
   from {
-    transform: translatex(-20%);
+    transform: translatex(-30%);
   }
   to {
-    transform: translatex(90%);
+    transform: translatex(30%);
+  }
+}
+@keyframes mymoveback {
+  from {
+    transform: translatex(-30%);
+  }
+  to {
+    transform: translatex(30%);
   }
 }
