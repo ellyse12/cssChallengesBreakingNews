@@ -18,18 +18,18 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
+  gap: 10px;
 }
-.container::after {
-  content: "Hello World! Hello World! Hello World! Hello World! Hello World";
+span {
+  animation: mymove 2.6s linear infinite;
   white-space: nowrap;
-  animation: mymove 3s linear infinite;
 }
 
 @keyframes mymove {
   from {
-    transform: translatex(0);
+    transform: translatex(-20%);
   }
   to {
-    transform: translatex(20%);
+    transform: translatex(90%);
   }
 }
